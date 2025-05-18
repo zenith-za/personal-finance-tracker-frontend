@@ -1,0 +1,29 @@
+<div class="container mx-auto p-6 max-w-md">
+  <form (ngSubmit)="onSubmit()" class="bg-ebony p-8 rounded-lg shadow-xl space-y-6">
+    <h2 class="text-2xl text-pewter font-semibold text-center">Login</h2>
+    <div *ngIf="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</div>
+    <input
+      [(ngModel)]="credentials.email"
+      name="email"
+      type="email"
+      placeholder="Email"
+      class="w-full p-3 bg-jet-black text-pewter border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    />
+    <input
+      [(ngModel)]="credentials.password"
+      name="password"
+      type="password"
+      placeholder="Password"
+      class="w-full p-3 bg-jet-black text-pewter border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    />
+    <button
+      type="submit"
+      class="w-full p-3 bg-pewter text-jet-black rounded-md hover:bg-gray transition-colors"
+    >
+      Login
+    </button>
+    <p class="text-center text-gray">
+      Don't have an account? <a routerLink="/register" class="text-pewter hover:underline">Register</a>
+    </p>
+  </form>
+</div>

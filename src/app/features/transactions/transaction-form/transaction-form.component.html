@@ -1,0 +1,44 @@
+<div class="container mx-auto p-6 max-w-lg">
+  <form (ngSubmit)="onSubmit()" class="bg-ebony p-8 rounded-lg shadow-xl space-y-6">
+    <h2 class="text-2xl text-pewter font-semibold text-center">Add Transaction</h2>
+    <input
+      [(ngModel)]="transaction.description"
+      name="description"
+      placeholder="Description"
+      class="w-full p-3 bg-pewter text-jet-black border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    />
+    <input
+      [(ngModel)]="transaction.amount"
+      name="amount"
+      type="number"
+      placeholder="Amount"
+      class="w-full p-3 bg-pewter text-jet-black border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    />
+    <input
+      [(ngModel)]="transaction.category"
+      name="category"
+      placeholder="Category"
+      class="w-full p-3 bg-pewter text-jet-black border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    />
+    <input
+      [(ngModel)]="transaction.date"
+      name="date"
+      type="date"
+      class="w-full p-3 bg-pewter text-jet-black border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    />
+    <select
+      [(ngModel)]="transaction.type"
+      name="type"
+      class="w-full p-3 bg-pewter text-jet-black border border-gray rounded-md focus:outline-none focus:ring-2 focus:ring-pewter"
+    >
+      <option value="Income" class="bg-jet-black">Income</option>
+      <option value="Expense" class="bg-jet-black">Expense</option>
+    </select>
+    <button
+      type="submit"
+      class="w-full p-3 bg-jet-black text-pewter rounded-md hover:bg-gray transition-colors"
+    >
+      Add Transaction
+    </button>
+  </form>
+</div>

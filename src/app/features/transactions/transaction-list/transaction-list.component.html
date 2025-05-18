@@ -1,0 +1,12 @@
+<div class="container mx-auto p-6">
+  <h1 class="text-3xl text-pewter font-bold mb-6">Transactions</h1>
+  <div class="grid gap-4">
+    <div
+      *ngFor="let transaction of transactions"
+      class="p-6 bg-ebony rounded-lg shadow-md hover:shadow-lg transition-shadow"
+    >
+      <p class="text-pewter font-semibold">{{ transaction.description }} - {{ transaction.amount | currency:'ZAR':'symbol':'1.2-2' }}</p>
+      <p class="text-gray">{{ transaction.category }} | {{ transaction.date | date }}</p>
+    </div>
+  </div>
+</div>
